@@ -1,0 +1,32 @@
+Creá una barra de navegación responsive con HTML y CSS puros
+
+Bootstrap, quién te conoce?
+
+<p>Aloha, everyone! Bienvenidos al primer post de mi blog, en el que quiero compartirles una de las, por lejos, mejores piezas de código que alguna vez llegaron a mí. Brindada como ejemplo por una profesora en un curso, me sorprendió no encontrar nada parecido ni tan simple en mis búsquedas por la red.<br />
+Esto es lo que estaremos construyendo: <a title="Ejemplo Responsive Navbar" target="_blank" href="https://diestrocorleone.github.io/responsive-navbar-html-css/">Responsive Navbar Demo</a>.<br />
+En resumen, es una barra de navegación que, llegado cierto breakpoint/ancho de pantalla, ha de colapsarse de forma vertical en lo que se llama comunmente un 'menú hamburguesa'. Y sin JavaScript ni frameworks, solo unas pocas líneas de CSS. 
+Empecemos!</p> <br />
+<h5>El HTML</h5>
+<p>Creamos un nav básico, lo único a tener en cuenta es que el mismo debe tener un <code>id="menu"</code>; el primer elemento <code>a</code> debe tener un <code>href</code> que apunte a ese id; y también verán que el texto un código Unicode: el correspondiente a las tres líneas horizontales que se ven cuando el menú se comprime y que se verá en pantallas pequeñas.<br/>
+El segundo <code>li</code> será la X para cerrar el menú, y debe tener un <code>href="#"</code>. El resto, serán los links a diversas partes de nuestro sitio.</p><br />
+<script src="https://gist.github.com/DiestroCorleone/d518a038e7433c0c7557ed59a0a55333.js"></script><br />
+<h5>El CSS</h5>
+<p>Comienzo agregando unos estilos básicos, como remover <em>margin</em> y <em>padding</em> del <code>body</code>, y darle un ancho y borde a nuestro nav para que se vea correctamente.</p><br/>
+<script src="https://gist.github.com/DiestroCorleone/51b98b9e6f95126e4fd1059250ecca2a.js"></script><br />
+<p>Aquí comemnzamos con lo importante: le damos un display <code>flex</code> y un <code>justify-content: space-between</code> a la lista desordenada dentro del nav, para que acomode nuestros links separados equitativamente. Y removemos el estilo a la lista para no tener los markers.<br />
+Luego, le indicamos a nuestro CSS que <strong>no muestre</strong> a los dos primeros elementos de la lista (el botón hamburguesa y el botón de cerrar), ya habrá oportunidad de hacerlos visibles en viewports pequeños. Además, agregué un poco de padding y cursor puntero para que el mouse nos muestre 'la manito' cuando nos apoyemos sobre ellos.
+</p><br />
+<script src="https://gist.github.com/DiestroCorleone/fb67b0060cd247675765e9f8d43e9f32.js"></script><br />
+<h5>Media query</h5>
+<p>Para este ejemplo, elegí que la navbar se colapse a los 800px, así que en pantallas de este ancho o menores es cuando se activará <em>la magia</em>, como comento en el snippet.<br />
+<ul>
+	<li>Primero, la dirección del <code>flex</code> pasa a ser columna, para que se vea vertical.</li>
+	<li>Después, le decimos que se muestre el <strong>primer</strong> elemento <code>li</code> de nuestro nav que no sea target. Esto es lo que irá mostrando/ocultando el botón hamburguesa y la 'X' de cerrar según corresponda.</li>
+	<li>Después ocultamos los <code>li</code> que no sean target.</li>
+	<li>Y por último escondemos el primer <code>li</code> que sí lo sea, lo que trabaja en conjunto con el segundo punto para intercalar entre botón de menú/botón de cerrar.</li>
+</ul>
+</p><br />
+<script src="https://gist.github.com/DiestroCorleone/0e266150e2bdc60924d6e445d76eeef7.js"></script><br />
+<p>Y listo! Ya tienen una barra de navegación perfectamente funcional sin necesidad de emplear JavaScript ni frameworks. Yo, personalmente, la incluyo en todos mis proyectos. Aquí el código completo: <a href="https://gist.github.com/DiestroCorleone/9bc3fa1e584e372faefdd9aa3f74ed7f" target="_blank" title="Gist Responsive Navbar">Gist Responsive Navbar con HTML y CSS</a>.</p><br />
+<p>Si se les ocurre alguna alternativa más simple o efectiva, me encantaría saberlo. Pueden contactarme por <a href="https://www.linkedin.com/in/matias-gabriel-perez/" title="Matías Pérez LinkedIn" target="_blank">LinkedIn</a>. Eventualmente tal vez cree otras redes sociales dedicadas a este blog, pero es pronto para saberlo. Es sábado por la mañana y quiero ir a tomarme unos mates.<br />Así que gracias por la visita, y <strong>happy coding!</strong></p>
+
