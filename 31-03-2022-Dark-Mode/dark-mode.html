@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="YOUR DESCRIPTION">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejemplo Dark Mode</title>
+<!----------CSS---------->
+	<style type="text/css">
+    body {
+      color: black;
+      background-color: white;
+    }
+    
+    .dark-mode {
+      color: white;
+      background-color: black;
+    }
+	</style>
+</head>
+<body>
+  <h1>Modo oscuro fácil con pocas líneas de código!</h1>
+  <p>Click en el botón para que la magia suceda...<br><br>
+  <button onclick="darkMode()">ACTIVAR/DESACTIVAR MODO OSCURO</button>
+  </p>
+<!---------SCRIPTS--------->
+<script type="text/javascript">
+  function darkMode(){
+    const body = document.querySelector("body");
+    body.classList.toggle("dark-mode");
+  }
+</script>
+</body>
+</html>
